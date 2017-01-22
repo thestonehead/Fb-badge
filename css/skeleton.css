@@ -32,8 +32,8 @@
   position: relative;
   width: 100%;
   max-width: 960px;
-  margin: 0 auto;
-  padding: 0 20px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box; }
   
 .column,
@@ -45,8 +45,9 @@
 /* For devices larger than 400px */
 @media (min-width: 400px) {
   .container {
-    width: 85%;
-    padding: 0; }
+    width: 90%;
+	margin: 0 auto;
+    padding: 0 20px; }
 }
 
 /* For devices larger than 550px */
@@ -167,7 +168,6 @@ a:hover {
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .button,
-button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {

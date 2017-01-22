@@ -1,0 +1,164 @@
+html,
+body,
+#bubbles { height: 100% }
+body { overflow: hidden }
+#bubbles { padding: 100px 0 }
+.bubble {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    /*background: #00ff00 url("http://orig01.deviantart.net/d3da/f/2010/044/4/6/space_invaders_by_maleiva.jpg") no-repeat fixed center; */
+    background-size: 60px 60px;
+	z-index:-1;
+}
+
+@media screen and (max-width: 800px) { /* Specific to this particular image */
+  .bubble {
+    visibility: hidden;
+  }
+}@media screen and (max-width: 800px) { /* Specific to this particular image */
+  .bubble {
+    visibility: hidden;
+  }
+}
+
+.invader_1 {
+	background: url('../images/invaders/invader01_150.png') no-repeat fixed center;
+	background-size: 60px 60px;
+}
+.invader_2 {
+	background: url('../images/invaders/invader02_150.png') no-repeat fixed center;
+	background-size: 60px 60px;
+}
+.invader_3 {
+	background: url('../images/invaders/invader03_150.png') no-repeat fixed center;
+	background-size: 60px 60px;
+}
+.invader_4 {
+	background: url('../images/invaders/invader04_150.png') no-repeat fixed center;
+	background-size: 60px 60px;
+}
+.invader_5 {
+	background: url('../images/invaders/invader05_150.png') no-repeat fixed center;
+	background-size: 60px 60px;
+}
+.invader_6 {
+	background: url('../images/invaders/invader06_150.png') no-repeat fixed center;
+	background-size: 60px 60px;
+}
+.invader_7 {
+	background: url('../images/invaders/invader07_150.png') no-repeat fixed center;
+	background-size: 60px 60px;
+}
+.invader_8 {
+	background: url('../images/invaders/invader08_150.png') no-repeat fixed center;
+	background-size: 60px 60px;
+}
+.invader_9 {
+	background: url('../images/invaders/invader09_150.png') no-repeat fixed center;
+	background-size: 60px 60px;
+}
+.invader_10 {
+	background: url('../images/invaders/invader10_150.png') no-repeat fixed center;
+	background-size: 60px 60px;
+}
+/*
+.x1 {
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    transform: scale(0.9);
+    opacity: 0.2;
+    -webkit-animation: moveclouds 15s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    -moz-animation: moveclouds 15s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    -o-animation: moveclouds 15s linear infinite, sideWays 4s ease-in-out infinite alternate;
+}
+
+.x2 {
+    -webkit-transform: scale(0.6);
+    -moz-transform: scale(0.6);
+    transform: scale(0.6);
+    opacity: 0.5;
+    -webkit-animation: moveclouds 25s linear infinite, sideWays 5s ease-in-out infinite alternate;
+    -moz-animation: moveclouds 25s linear infinite, sideWays 5s ease-in-out infinite alternate;
+    -o-animation: moveclouds 25s linear infinite, sideWays 5s ease-in-out infinite alternate;
+}
+.x3 {
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0.3;
+    -webkit-animation: moveclouds 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    -moz-animation: moveclouds 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    -o-animation: moveclouds 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+}
+.x4 {
+    -webkit-transform: scale(0.75);
+    -moz-transform: scale(0.75);
+    transform: scale(0.75);
+    opacity: 0.35;
+    -webkit-animation: moveclouds 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    -moz-animation: moveclouds 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    -o-animation: moveclouds 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
+}
+.x5 {
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0.3; 
+    -webkit-animation: moveclouds 7s linear infinite, sideWays 1s ease-in-out infinite alternate;
+    -moz-animation: moveclouds 7s linear infinite, sideWays 1s ease-in-out infinite alternate;
+    -o-animation: moveclouds 7s linear infinite, sideWays 1s ease-in-out infinite alternate;
+}*/
+@-webkit-keyframes moveclouds { 
+    0% { 
+        top: 1200px;
+    }
+    100% { 
+        top: -150px;
+    }
+}
+
+@-webkit-keyframes sideWays { 
+    0% { 
+        margin-left:0px;
+    }
+    100% { 
+        margin-left:50px;
+    }
+}
+
+@-moz-keyframes moveclouds {     
+    0% { 
+        top: 1200px;
+    }
+
+    100% { 
+        top: -150px;
+    }
+}
+
+@-moz-keyframes sideWays {
+    0% {
+        margin-left:0px;
+    }
+    100% {
+        margin-left:50px;
+    }
+}
+@-o-keyframes moveclouds {
+    0% { 
+        top: 1200px;
+    }
+    100% { 
+        top: -150px;
+    }
+}
+
+@-o-keyframes sideWays {
+    0% {
+        margin-left:0px;
+    }
+    100% {
+        margin-left:50px;
+    }
+}

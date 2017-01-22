@@ -2,22 +2,35 @@
 .bg {
   /* Set rules to fill background */
   min-height: 100%;
-  min-width: 1024px;
+  /*min-width: 1024px;*/
 	
   /* Set up proportionate scaling */
   width: 100%;
   height: auto;
 	
   /* Set up positioning */
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
+  
+
+  background-color: black;
+}
+@media screen and (min-width: 1025px) {
+	.bg{
+		  /* Set background image */
+		  background-image: url('../images/starry_background.jpg');
+		  background-repeat: no-repeat;
+		  background-position: 50% 50%;
+	}
 }
 
 @media screen and (max-width: 1024px) { /* Specific to this particular image */
   .bg {
-    left: 50%;
-    margin-left: -512px;   /* 50% */
+  /*  left: 50%;*/
+ /*   margin-left: -512px;   /* 50% */
+	
+	position:relative;
   }
 }
 
@@ -34,26 +47,47 @@
 
 }
 
+@media screen and (max-width: 800px) { /* Specific to this particular image */
+  .row {
+    width: 100%;
+	margin: 0px;
+	padding:0px;
+  }
+}
+
 .header{
 	text-align: center;
 	
 }
 
-
+.footer {
+	font-size: 8px;
+}
 
 
 img.profile{
-
 	display:block;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	
-	width: 380px; /* Width of new image */
-	height: 380px; /* Height of new image */
-	margin: 0 auto;
+	width: 320px; /* Width of new image */
+	height: 320px; /* Height of new image */
+	margin: 5px auto;
 	-moz-box-shadow: 0 0 10px black; 
 	-webkit-box-shadow: 0 0 10px black; 
 	box-shadow: 0 0 10px black; 
+}
+
+.carousel img.profile {
+	margin: 5px;
+}
+
+
+@media screen and (max-width: 800px) { /* Specific to this particular image */
+  img.profile {
+    width: 240px;
+	height: 240px;
+  }
 }
 
 h1 {
