@@ -6,7 +6,6 @@
   $helper = $fb->getRedirectLoginHelper();
  
   $permissions = ['email', 'user_posts','publish_actions']; // optional
-  // $callback_url    = 'http://isupportnetneutrality.in/login.php'; // Define this in crud.php
   $loginUrl    = $helper->getLoginUrl($callback_url, $permissions);
 
   ?>
@@ -26,6 +25,9 @@
     <link rel="stylesheet" href="css/skeleton.css">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link href="css/custom.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/flickity.css" media="screen">
+	<link rel="stylesheet" href="css/invaders.css" media="screen">
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,34 +36,51 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <img src=<?php echo $bg_path?> class="bg">
+  <body class="bg">
     <div class="container">
       <div class="row">
         
         <div class="header">
-          <h1>Show your support for Net Neutrality</h1>
-          <img class="profile" src="images/arjun.jpg"/>
+          <h1>Show your support for SFeraKon 2017</h1>
+		  <div class="carousel" >
+			<img class="profile" src="images/default480_1.png"/>
+			<img class="profile" src="images/default480_2.png"/>
+			<img class="profile" src="images/default480_3.png"/>
+		  </div>
         </div>
         <div class="content">
         <br/>
-        <p>Show your support for Net Neutrality by updating your facebook picture. </p>       
+        <p>Show your support for SFeraKon 2017 by updating your facebook picture. </p>       
           <a class="button button-primary" href=<?php echo htmlspecialchars($loginUrl);?> > Log in to Facebook </a> 
-       
+ 
        </div>
-        <ul class="share-buttons">
-          <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fisupportnetneutrality.in%2F&t=Show%20your%20support%20for%20Net%20Neutralty" title="Share on Facebook" target="_blank"><img src="images/simple_icons_black/Facebook.png"></a></li>
-          <li><a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Fisupportnetneutrality.in%2F&text=Show%20your%20support%20for%20Net%20Neutralty:%20http%3A%2F%2Fisupportnetneutrality.in%2F&via=ashwinm" target="_blank" title="Tweet"><img src="images/simple_icons_black/Twitter.png"></a></li>
-          <li><a href="http://www.reddit.com/submit?url=http%3A%2F%2Fisupportnetneutrality.in%2F&title=Show%20your%20support%20for%20Net%20Neutralty" target="_blank" title="Submit to Reddit"><img src="images/simple_icons_black/Reddit.png"></a></li>
-          <li><a href="mailto:?subject=Show%20your%20support%20for%20Net%20Neutralty&body=Let%20us%20show%20our%20support%20for%20Net%20Neutrality%20by%20changing%20our%20facebook%20profile%20picture:%20http%3A%2F%2Fisupportnetneutrality.in%2F" target="_blank" title="Email"><img src="images/simple_icons_black/Email.png"></a></li>
-        </ul>
-        <footer class="footer">
-        <div class="pp"><a href="privacy-policy.html">Privacy policy</a></div>
-        <a href='https://github.com/ashwin47/Net-Neutral'>Made</a> by <a href="http://twitter.com/ashwinm">@ashwinm</a>
-        </footer>
-
+		
+		<?php require( __DIR__.'/footer.php' ); ?>
       </div>
+	  
     </div>
-    
+	
+   
+	<script	  src="https://code.jquery.com/jquery-2.2.4.min.js"
+			  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+			  crossorigin="anonymous"></script>
+	<script src="flickity.pkgd.min.js"></script>
+	<script src="invaders.js"></script>
+	<script type="text/javascript">
+
+		var $carousel = $('.carousel');
+		var flkty = new Flickity('.carousel', {
+			wrapAround: true,
+			percentPosition: false
+		});
+		//data-flickity='{ "wrapAround": true, "percentPosition": false }'
+		
+		document.cookie = 'selectedOverlay=1' ;
+		// bind event listener
+		$carousel.on( 'select.flickity', function() {
+			  //alert( 'Flickity select ' + flkty.selectedIndex )
+			  document.cookie = 'selectedOverlay=' + (flkty.selectedIndex +1);
+			});
+	</script>
   </body>
 </html>
